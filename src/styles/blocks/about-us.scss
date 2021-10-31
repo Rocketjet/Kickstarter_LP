@@ -1,0 +1,121 @@
+.about-us {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 30px;
+    margin-bottom: 90px;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-family: "DIN Pro Bold", sans-serif;
+    font-size: 37px;
+    line-height: 55px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  &__paragraph {
+    width: 260px;
+    margin-bottom: 30px;
+    font-size: $f-s-14;
+    line-height: $l-h-21;
+    color: $f-c-secondary;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: $accent-c;
+    
+    &::after {
+      @extend %pseudo-underline;
+      background-color: $accent-c;
+    }
+
+    &:hover:after {
+      width: 130px;
+    }
+  }
+
+  @include onTablet {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr 1fr 15%;
+      row-gap: 30px;
+      column-gap: 20px;
+      padding: 0;
+      margin: 0 34px 130px 0;
+    }
+
+    &__title {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-left: -91px;
+      margin-bottom: 0;
+      font-size: 56px;
+      line-height: 72px;
+    }
+
+    &__img {
+      height: 415px;
+      width: 623px;
+      margin: 0;
+      grid-column: 1/2;
+      grid-row: 1/4;
+      justify-self: right;
+      position: relative;
+      left: 0;
+      z-index: -1;
+    }
+
+    &__paragraph {
+      width: 340px;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin: 0;
+      font-size: $f-s-16;
+      line-height: $l-h-24;
+    }
+
+    &__link {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+
+  @include onDesktop {
+    &__wrapper {
+      width: 990px;
+      max-width: 1440px;
+      grid-template-columns: 582px 378px;
+      gap: 30px;
+      margin: 0 auto 150px;
+    }
+
+    &__title {
+      margin-left: -97px;
+      margin-bottom: 0;
+    }
+
+    &__img {
+      height: 388px;
+      width: 582px;
+    }
+
+    &__paragraph {
+      width: 378px;
+    }
+  }
+}

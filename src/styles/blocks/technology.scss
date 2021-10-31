@@ -1,0 +1,55 @@
+.technology {
+
+  &__title {
+    margin: 0 30px;
+    font-family: "DIN Pro Bold", sans-serif;
+    font-size: 37px;
+    text-transform: uppercase;
+  }
+
+  &__img-box {
+    overflow: hidden;
+    margin-bottom: 78px;
+  }
+
+  &__img {
+    display: block;
+    width: 200%;
+    transform: matrix(0.99,-0.14,0.14,0.99,0,0);
+  }
+
+  @include onTablet {
+
+    &__title {
+      margin-left: 130px;
+      font-size: 56px;
+      line-height: 70px;
+    }
+
+    &__img-box {
+      margin-bottom: 40px;
+    }
+  
+    &__img {
+      width: 160%;
+    }
+  }
+
+  @include onDesktop {
+
+    &__title {
+      margin-left: 225px;
+    }
+
+    &__img-box {
+      margin-left: 90px;
+      margin-bottom: 62px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__img {
+      width: 1230px;
+    }
+  }
+}

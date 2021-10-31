@@ -1,4 +1,26 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+%transition {
+  transition: transform ease-out 0.6s;
+  &:hover {
+    transform: translateX(-15%);
+  }
+}
+
+%toggler-button {
+  display: block;
+  width: 48px;
+  height: 13px;
+  background-color: inherit;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+%pseudo-underline {
+  display: block;
+  margin-top: 6px;
+  content: "";
+  width: 0;
+  height: 1px;
+
+  transition: width 0.3s;
 }

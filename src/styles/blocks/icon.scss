@@ -1,0 +1,50 @@
+.icon {
+  width: 100%;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--menu {
+    height: 14px;
+    width: 24px;
+    background-image: url(../images/menu_icon.svg);
+
+    @extend %transition;
+  }
+
+  
+  @include onTablet {
+    & {
+      display: none;
+    }
+  }
+  
+  @include onDesktop {
+    & {
+      display: none;
+    }
+  }
+  
+  &--cross {
+    height: 18px;
+    width: 24px;
+    filter: invert(100%) sepia(86%) saturate(0%) hue-rotate(114deg)
+      brightness(110%) contrast(101%);
+    background-image: url(../images/cross.svg);
+  
+    @extend %transition;
+  
+    @include onTablet {
+      & {
+        display: block;
+      }
+    }
+  
+    @include onDesktop {
+      & {
+        display: block;
+      }
+    }
+  }
+}

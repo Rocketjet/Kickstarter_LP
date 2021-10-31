@@ -1,7 +1,26 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+@import "utils/reset";
+@import "utils/fonts";
 
-body {
-  background: $c-gray;
-}
+@import "blocks/container.scss";
+@import "blocks/grid.scss";
+@import "blocks/icon.scss";
+@import "blocks/logo.scss";
+
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/header-sidebar.scss";
+@import "blocks/header-main.scss";
+@import "blocks/header-nav.scss";
+@import "blocks/menu.scss";
+@import "blocks/top-actions.scss";
+@import "blocks/benefits.scss";
+@import "blocks/about-us.scss";
+@import "blocks/technology.scss";
+@import "blocks/testimonials.scss";
+@import "blocks/features.scss";
+@import "blocks/feedback.scss";
+@import "blocks/socials-link.scss";
+@import "blocks/footer.scss";
